@@ -1,0 +1,8 @@
+.vagrant/
+
+*.img
+*.iso
+*.iso.lock
+*.log
+*.zip
+*.zip.lock

@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  packer:
+    image: local/packer-builder-arm
+    build: docker/
+    volumes:
+      - .:/workspace
+      - /dev:/dev
+    privileged: true
+    command:
+      - /bin/sh
+      - -c
+      - "sudo /register --reset -p yes 2>/dev/null && make packer-build"
