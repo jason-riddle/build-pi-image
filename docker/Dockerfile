@@ -1,17 +1,15 @@
 FROM multiarch/qemu-user-static:register AS register
 FROM golang:1.13-buster AS builder
 
+ENV GO111MODULE=on
+
 # Install git
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git
 
-# Prepare build directory
-WORKDIR /build
-
 # Build packer-builder-arm
-RUN git clone https://github.com/mkaczanowski/packer-builder-arm \
-    && cd packer-builder-arm \
-    && GO111MODULE=on go build -o packer-builder-arm
+RUN go get -d github.com/mkaczanowski/packer-builder-arm \
+    && go install github.com/mkaczanowski/packer-builder-arm
 
 FROM ubuntu:18.04
 
@@ -27,7 +25,7 @@ RUN wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSI
     && rm -f /tmp/packer.zip
 
 # Copy relevant binaries
-COPY --from=builder  /build/packer-builder-arm/packer-builder-arm /usr/local/bin/packer-builder-arm
+COPY --from=builder  /go/bin/packer-builder-arm /usr/local/bin/packer-builder-arm
 COPY --from=register /register /register
 COPY --from=register /qemu-binfmt-conf.sh /qemu-binfmt-conf.sh
 
