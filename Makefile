@@ -13,3 +13,9 @@ packer-build:
 
 fmt:
 	hclfmt -w .
+
+deps:
+	npm install balena-cli -g --production
+
+burn:
+	balena local flash
