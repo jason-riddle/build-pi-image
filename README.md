@@ -13,11 +13,17 @@ and I suggest you fork this repo and make your own changes.
 
 ## Usage
 
-Build with
+Checkout `packer-builder-arm` submodule.
 
+```sh
+git submodule update --init --recursive
 ```
+
+Build `raspberry-pi.img`
+
+```sh
 make build
 ```
 
-Once finished, the `raspberry-pi.img` artifact can be burned to an SD card. I
+The `raspberry-pi.img` artifact can be burned to an SD card. I
 use [etcher](https://www.balena.io/etcher) for burning.
