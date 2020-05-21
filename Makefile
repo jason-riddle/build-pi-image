@@ -10,12 +10,3 @@ packer-build:
 	PACKER_CACHE_DIR=packer_cache \
 	PACKER_LOG_PATH=packer_build.log \
 	packer build raspbian.json
-
-fmt:
-	hclfmt -w .
-
-deps:
-	npm install balena-cli -g --production
-
-burn:
-	balena local flash
