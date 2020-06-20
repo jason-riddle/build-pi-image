@@ -1,5 +1,5 @@
 FROM multiarch/qemu-user-static:register AS register
-FROM golang:1.13-buster AS builder
+FROM golang:1.14-buster AS builder
 
 ENV GO111MODULE=on
 
@@ -14,7 +14,7 @@ RUN cd /go/src/github.com/mkaczanowski/packer-builder-arm \
 
 FROM ubuntu:18.04
 
-ARG PACKER_VERSION=1.5.5
+ARG PACKER_VERSION=1.6.0
 
 # Install dependencies
 RUN apt-get update \

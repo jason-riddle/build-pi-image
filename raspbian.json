@@ -4,9 +4,9 @@
     {
       "type": "arm",
       "file_urls": [
-        "https://downloads.raspberrypi.org/raspbian/images/raspbian-2019-09-30/2019-09-26-raspbian-buster.zip"
+        "https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip"
       ],
-      "file_checksum_url": "https://downloads.raspberrypi.org/raspbian/images/raspbian-2019-09-30/2019-09-26-raspbian-buster.zip.sha256",
+      "file_checksum_url": "https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip.sha256",
       "file_checksum_type": "sha256",
       "file_target_extension": "zip",
       "image_build_method": "reuse",
