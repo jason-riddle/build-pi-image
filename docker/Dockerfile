@@ -7,9 +7,10 @@ ENV GO111MODULE=on
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git
 
-# Build packer-builder-arm
-RUN go get -d github.com/mkaczanowski/packer-builder-arm \
-    && go install github.com/mkaczanowski/packer-builder-arm
+# Add and build packer-builder-arm, then install to /go/bin/packer-builder-arm
+ADD ./packer-builder-arm /go/src/github.com/mkaczanowski/packer-builder-arm
+RUN cd /go/src/github.com/mkaczanowski/packer-builder-arm \
+    && go install .
 
 FROM ubuntu:18.04
 
