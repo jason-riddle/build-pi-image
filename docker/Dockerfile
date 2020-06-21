@@ -12,6 +12,11 @@ ADD ./packer-builder-arm /go/src/github.com/mkaczanowski/packer-builder-arm
 RUN cd /go/src/github.com/mkaczanowski/packer-builder-arm \
     && go install .
 
+# Add and build packer-provisioner-goss, then install to /go/bin/packer-provisioner-goss
+ADD ./packer-provisioner-goss /go/src/github.com/YaleUniversity/packer-provisioner-goss
+RUN cd /go/src/github.com/YaleUniversity/packer-provisioner-goss \
+    && go install .
+
 FROM ubuntu:18.04
 
 ARG PACKER_VERSION=1.6.0
@@ -27,6 +32,7 @@ RUN wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSI
 
 # Copy relevant binaries
 COPY --from=builder  /go/bin/packer-builder-arm /usr/local/bin/packer-builder-arm
+COPY --from=builder  /go/bin/packer-provisioner-goss /usr/local/bin/packer-provisioner-goss
 COPY --from=register /register /register
 COPY --from=register /qemu-binfmt-conf.sh /qemu-binfmt-conf.sh
 
