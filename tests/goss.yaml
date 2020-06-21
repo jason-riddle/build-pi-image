@@ -1,0 +1,4 @@
+file:
+  /boot/ssh:
+    filetype: file
+    exists: true

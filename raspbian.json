@@ -44,6 +44,13 @@
       "inline": [
         "touch /boot/ssh"
       ]
+    },
+    {
+      "type": "goss",
+      "version": "0.3.12",
+      "tests": [
+        "tests/goss.yaml"
+      ]
     }
   ]
 }
