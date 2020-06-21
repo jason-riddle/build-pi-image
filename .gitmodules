@@ -1,3 +1,6 @@
 [submodule "packer-builder-arm"]
 	path = docker/packer-builder-arm
 	url = https://github.com/mkaczanowski/packer-builder-arm
+[submodule "docker/packer-provisioner-goss"]
+	path = docker/packer-provisioner-goss
+	url = https://github.com/YaleUniversity/packer-provisioner-goss
