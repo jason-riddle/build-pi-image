@@ -1,0 +1,20 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:202004-01
+
+    steps:
+      - checkout
+      - run:
+          name: Initialize git submodules
+          command: git submodule update --init --recursive
+      - run:
+          name: Build raspbian image
+          command: make build
+
+workflows:
+  build:
+    jobs:
+      - build
