@@ -4,5 +4,7 @@
 *.iso
 *.iso.lock
 *.log
+*.xz
+*.xz.lock
 *.zip
 *.zip.lock

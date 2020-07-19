@@ -10,3 +10,9 @@ packer-build:
 	PACKER_CACHE_DIR=packer_cache \
 	PACKER_LOG_PATH=packer_build.log \
 	packer build raspbian.json
+
+packer-build-ubuntu:
+	PACKER_LOG=1 \
+	PACKER_CACHE_DIR=packer_cache \
+	PACKER_LOG_PATH=packer_build.log \
+	packer build ubuntu-20.04-arm64.json
