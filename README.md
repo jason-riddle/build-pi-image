@@ -6,6 +6,9 @@ Enabling SSH on raspbian requires creating a `/boot/ssh` file. `raspbian.json`
 creates the file and a [goss](https://github.com/aelsabbahy/goss) test
 validates it exists.
 
+Also included is `ubuntu-20.04-arm64.json` for building an ubuntu image. This
+may be broken and welcome PRs with fixes.
+
 ## Requirements
 
 - docker
