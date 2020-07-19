@@ -1,10 +1,10 @@
-# Packer Build: Raspbian OS
+# Packer Build: Raspberry Pi Image
 
-Build a custom Raspbian OS image using Docker, Packer, and [packer-builder-arm](https://github.com/mkaczanowski/packer-builder-arm).
+Build Raspberry Pi images using Docker, Packer, and [packer-builder-arm](https://github.com/mkaczanowski/packer-builder-arm).
 
-Since enabling SSH on the raspbian requires creating the `/boot/ssh` file, I
-have automated doing this with packer. Additional customizations are possible
-and I suggest you fork this repo and make your own changes.
+Enabling SSH on raspbian requires creating a `/boot/ssh` file. `raspbian.json`
+creates the file and a [goss](https://github.com/aelsabbahy/goss) test
+validates it exists.
 
 ## Requirements
 
