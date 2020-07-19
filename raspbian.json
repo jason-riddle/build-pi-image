@@ -10,7 +10,7 @@
       "file_checksum_type": "sha256",
       "file_target_extension": "zip",
       "image_build_method": "reuse",
-      "image_path": "raspberry-pi.img",
+      "image_path": "raspbian.img",
       "image_size": "2G",
       "image_type": "dos",
       "image_partitions": [

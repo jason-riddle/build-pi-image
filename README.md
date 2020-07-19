@@ -19,13 +19,13 @@ Checkout `packer-builder-arm` submodule.
 git submodule update --init --recursive
 ```
 
-Build `raspberry-pi.img`
+Build `raspbian.img`
 
 ```sh
 make build
 ```
 
-The `raspberry-pi.img` artifact can be burned to an SD card. I
+The `raspbian.img` artifact can be burned to an SD card. I
 use [etcher](https://www.balena.io/etcher) for burning.
 
 ## Bonus: Configuration Management with Ansible
