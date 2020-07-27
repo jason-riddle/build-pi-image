@@ -14,3 +14,6 @@ packer-builder-arm:
 
 packer-builder-arm-ubuntu:
 	packer build packer-builder-arm-samples/ubuntu-20.04-arm64.json
+
+packer-builder-arm-image:
+	packer build packer-builder-arm-image-samples/raspbian.json
