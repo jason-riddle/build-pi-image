@@ -5,14 +5,14 @@ build:
 	--abort-on-container-exit \
 	--remove-orphans
 
-packer-build:
+packer-builder-arm:
 	PACKER_LOG=1 \
 	PACKER_CACHE_DIR=packer_cache \
 	PACKER_LOG_PATH=packer_build.log \
-	packer build raspbian.json
+	packer build packer-builder-arm-samples/raspbian.json
 
-packer-build-ubuntu:
+packer-builder-arm-ubuntu:
 	PACKER_LOG=1 \
 	PACKER_CACHE_DIR=packer_cache \
 	PACKER_LOG_PATH=packer_build.log \
-	packer build ubuntu-20.04-arm64.json
+	packer build packer-builder-arm-samples/ubuntu-20.04-arm64.json

@@ -16,7 +16,7 @@ may be broken and welcome PRs with fixes.
 
 ## Usage
 
-Checkout `packer-builder-arm` submodule.
+Checkout git submodules.
 
 ```sh
 git submodule update --init --recursive
