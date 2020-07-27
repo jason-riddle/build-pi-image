@@ -11,4 +11,4 @@ services:
     command:
       - /bin/sh
       - -c
-      - "sudo /register --reset -p yes 2>/dev/null && make packer-build"
+      - "sudo /register --reset -p yes 2>/dev/null && make packer-builder-arm"
