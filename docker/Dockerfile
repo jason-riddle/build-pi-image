@@ -21,7 +21,7 @@ RUN cd /go/src/github.com/YaleUniversity/packer-provisioner-goss \
 
 FROM ubuntu:18.04
 
-ARG PACKER_VERSION=1.6.0
+ARG PACKER_VERSION=1.6.1
 
 # Install dependencies
 RUN apt-get update \
