@@ -3,21 +3,19 @@ FROM golang:1.14-buster AS builder
 
 ENV GO111MODULE=on
 
-# Install git
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git
 
-# Add and build packer-builder-arm, then install to /go/bin/packer-builder-arm
-ADD ./packer-builder-arm /go/src/github.com/mkaczanowski/packer-builder-arm
+# Install packer plugins
+ADD ./third_party/github.com/mkaczanowski/packer-builder-arm /go/src/github.com/mkaczanowski/packer-builder-arm
 RUN cd /go/src/github.com/mkaczanowski/packer-builder-arm \
     && go install .
 
-ADD ./packer-builder-arm-image /go/src/github.com/solo-io/packer-builder-arm-image
+ADD ./third_party/github.com/solo-io/packer-builder-arm-image /go/src/github.com/solo-io/packer-builder-arm-image
 RUN cd /go/src/github.com/solo-io/packer-builder-arm-image \
     && go install .
 
-# Add and build packer-provisioner-goss, then install to /go/bin/packer-provisioner-goss
-ADD ./packer-provisioner-goss /go/src/github.com/YaleUniversity/packer-provisioner-goss
+ADD ./third_party/github.com/YaleUniversity/packer-provisioner-goss /go/src/github.com/YaleUniversity/packer-provisioner-goss
 RUN cd /go/src/github.com/YaleUniversity/packer-provisioner-goss \
     && go install .
 
