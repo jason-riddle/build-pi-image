@@ -19,7 +19,7 @@ Checkout git submodules.
 git submodule update --init --recursive
 ```
 
-Build Raspberry Pi Image and place image in `artifacts/`.
+Build Raspberry Pi Image and store built image in `tmp/packer_artifacts/`.
 
 ```sh
 make build

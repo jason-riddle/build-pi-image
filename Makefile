@@ -1,8 +1,8 @@
 export COMPOSE_MAKE_TARGET = build-with-mkaczanowski-builder-arm
 
 export PACKER_LOG = 1
-export PACKER_CACHE_DIR = packer_cache
-export PACKER_LOG_PATH = packer_build.log
+export PACKER_CACHE_DIR = tmp/packer_cache
+export PACKER_LOG_PATH = tmp/packer_build.log
 
 build:
 	COMPOSE_HTTP_TIMEOUT=5 docker-compose up \
