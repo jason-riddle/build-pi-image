@@ -1,4 +1,4 @@
-export COMPOSE_MAKE_TARGET = packer-builder-arm-image
+export COMPOSE_MAKE_TARGET = build-with-mkaczanowski-builder-arm
 
 export PACKER_LOG = 1
 export PACKER_CACHE_DIR = packer_cache
@@ -11,8 +11,8 @@ build:
 	--abort-on-container-exit \
 	--remove-orphans
 
-packer-builder-arm:
-	packer build packer-builder-arm-samples/raspbian.json
+build-with-mkaczanowski-builder-arm:
+	packer build samples/mkaczanowski-builder-arm/raspbian.json
 
-packer-builder-arm-image:
-	packer build packer-builder-arm-image-samples/raspbian.json
+build-with-solo-io-builder-arm:
+	packer build samples/solo-io-builder-arm/raspbian.json
