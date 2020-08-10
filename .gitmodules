@@ -1,0 +1,9 @@
+[submodule "docker/third_party/github.com/mkaczanowski/packer-builder-arm"]
+	path = docker/third_party/github.com/mkaczanowski/packer-builder-arm
+	url = https://github.com/mkaczanowski/packer-builder-arm
+[submodule "docker/third_party/github.com/solo-io/packer-builder-arm-image"]
+	path = docker/third_party/github.com/solo-io/packer-builder-arm-image
+	url = https://github.com/solo-io/packer-builder-arm-image
+[submodule "docker/third_party/github.com/YaleUniversity/packer-provisioner-goss"]
+	path = docker/third_party/github.com/YaleUniversity/packer-provisioner-goss
+	url = https://github.com/YaleUniversity/packer-provisioner-goss
