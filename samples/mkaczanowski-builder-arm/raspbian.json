@@ -4,13 +4,13 @@
     {
       "type": "arm",
       "file_urls": [
-        "https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip"
+        "https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip"
       ],
-      "file_checksum_url": "https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip.sha256",
+      "file_checksum_url": "https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip.sha256",
       "file_checksum_type": "sha256",
       "file_target_extension": "zip",
       "image_build_method": "reuse",
-      "image_path": "raspbian.img",
+      "image_path": "artifacts/raspbian-mkaczanowski.img",
       "image_size": "2G",
       "image_type": "dos",
       "image_partitions": [

@@ -19,11 +19,11 @@ Checkout git submodules.
 git submodule update --init --recursive
 ```
 
-Build `raspbian.img`
+Build Raspberry Pi Image and place image in `artifacts/`.
 
 ```sh
 make build
 ```
 
-The `raspbian.img` artifact can be burned to an SD card. I
-use [etcher](https://www.balena.io/etcher) for burning.
+[Etcher](https://www.balena.io/etcher) or [Raspberry Pi Imager](https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility)
+can be used for burning the image to an SD card.

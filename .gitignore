@@ -1,5 +1,3 @@
-.vagrant/
-
 *.img
 *.iso
 *.iso.lock
