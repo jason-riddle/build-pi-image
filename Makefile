@@ -1,3 +1,5 @@
+export COMPOSE_MAKE_TARGET = packer-builder-arm-image
+
 export PACKER_LOG = 1
 export PACKER_CACHE_DIR = packer_cache
 export PACKER_LOG_PATH = packer_build.log
