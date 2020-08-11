@@ -10,7 +10,7 @@
       "file_checksum_type": "sha256",
       "file_target_extension": "zip",
       "image_build_method": "reuse",
-      "image_path": "tmp/packer_artifacts/raspbian-mkaczanowski.img",
+      "image_path": "out/packer_artifacts/raspbian-mkaczanowski.img",
       "image_size": "2G",
       "image_type": "dos",
       "image_partitions": [

@@ -2,9 +2,9 @@
 
 Build Raspberry Pi images using Docker and Packer.
 
-Enabling SSH on raspbian requires creating a `/boot/ssh` file. `raspbian.json`
-creates the file and a [goss](https://github.com/aelsabbahy/goss) test
-validates it exists.
+The goal of this project is to automate building Raspberry Pi images. The built
+image has ssh enabled and runs a [goss](https://github.com/aelsabbahy/goss) test.
+to validate. This repo can be forked and tailored for other needs.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Checkout git submodules.
 git submodule update --init --recursive
 ```
 
-Build Raspberry Pi Image and store built image in `tmp/packer_artifacts/`.
+Build Raspberry Pi Image and store built image in `out/packer_artifacts/`.
 
 ```sh
 make build
