@@ -7,10 +7,6 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends git
 
 # Install packer plugins
-ADD ./third_party/github.com/mkaczanowski/packer-builder-arm /go/src/github.com/mkaczanowski/packer-builder-arm
-RUN cd /go/src/github.com/mkaczanowski/packer-builder-arm \
-    && go install .
-
 ADD ./third_party/github.com/solo-io/packer-builder-arm-image /go/src/github.com/solo-io/packer-builder-arm-image
 RUN cd /go/src/github.com/solo-io/packer-builder-arm-image \
     && go install .
@@ -25,7 +21,7 @@ ARG PACKER_VERSION=1.6.1
 
 # Install dependencies
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends sudo ca-certificates make wget unzip qemu-user-static xz-utils tzdata
+    && apt-get install -y --no-install-recommends sudo ca-certificates make qemu-user-static tzdata unzip wget xz-utils
 
 # Install packer
 RUN wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip 2>/dev/null \
@@ -33,7 +29,6 @@ RUN wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSI
     && rm -f /tmp/packer.zip
 
 # Copy relevant binaries
-COPY --from=builder  /go/bin/packer-builder-arm /usr/local/bin/packer-builder-arm
 COPY --from=builder  /go/bin/packer-builder-arm-image /usr/local/bin/packer-builder-arm-image
 COPY --from=builder  /go/bin/packer-provisioner-goss /usr/local/bin/packer-provisioner-goss
 COPY --from=register /register /register
