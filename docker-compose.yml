@@ -8,7 +8,7 @@ services:
     command:
       - /bin/sh
       - -c
-      - "sudo /register --reset -p yes 2>/dev/null && make ${COMPOSE_MAKE_TARGET}"
+      - "sudo /register --reset -p yes 2>/dev/null && make build-image"
     environment:
       - "TZ=US/Pacific"
     volumes:
