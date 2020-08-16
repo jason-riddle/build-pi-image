@@ -1,4 +1,5 @@
 .vagrant
+builds
 
 kernel-qemu*
 *.img
