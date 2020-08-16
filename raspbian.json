@@ -49,7 +49,7 @@
   "post-processors": [
     {
       "type": "checksum",
-      "checksum_types": ["md5", "sha1"],
+      "checksum_types": ["md5", "sha1", "sha256"],
       "output": "{{user `output_dir`}}/raspbian-buster-lite.img.{{.ChecksumType}}"
     },
     {
