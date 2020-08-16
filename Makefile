@@ -1,4 +1,4 @@
-export COMPOSE_MAKE_TARGET = build-with-mkaczanowski-builder-arm
+export COMPOSE_MAKE_TARGET = build-mkaczanowski
 
 TIMESTAMP = $(shell TZ=US/Pacific date +"%FT%T%z")
 
@@ -13,10 +13,10 @@ build:
 	--abort-on-container-exit \
 	--remove-orphans
 
-build-with-mkaczanowski-builder-arm:
+build-mkaczanowski:
 	mkdir -p builds/$(TIMESTAMP)/image
 	packer build -var 'output_dir=builds/$(TIMESTAMP)/image' samples/mkaczanowski-builder-arm/raspbian.json
 
-build-with-solo-io-builder-arm:
+build-solo-io:
 	mkdir -p builds/$(TIMESTAMP)/image
 	packer build -var 'output_dir=builds/$(TIMESTAMP)/image' samples/solo-io-builder-arm/raspbian.json
