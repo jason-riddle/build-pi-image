@@ -1,9 +1,10 @@
 ---
 - hosts: localhost
+  connection: local
   become: true
 
   tasks:
-    - name: Install Apache.
+    - name: Install vim.
       package:
-        name: 'httpd'
+        name: 'vim'
         state: present
