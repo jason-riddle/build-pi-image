@@ -6,3 +6,5 @@ file:
 package:
   ansible:
     installed: true
+  ansible-playbook:
+    installed: true

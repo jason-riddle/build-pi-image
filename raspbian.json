@@ -37,6 +37,13 @@
       "tests": [
         "tests/goss.yaml"
       ]
+    },
+    {
+      "type": "ansible-local",
+      "extra_arguments": [
+        "-vvvv"
+      ],
+      "playbook_file": "ansible/local.yml"
     }
   ]
 }
