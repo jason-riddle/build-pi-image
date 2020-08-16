@@ -45,5 +45,17 @@
       ],
       "playbook_file": "ansible/local.yml"
     }
+  ],
+  "post-processors": [
+    {
+      "type": "checksum",
+      "checksum_types": ["md5", "sha1"],
+      "output": "{{user `output_dir`}}/raspbian-buster-lite.img.{{.ChecksumType}}"
+    },
+    {
+      "type": "manifest",
+      "output": "{{user `output_dir`}}/manifest.json",
+      "strip_path": false
+    }
   ]
 }
