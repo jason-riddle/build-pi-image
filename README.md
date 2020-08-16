@@ -28,7 +28,7 @@ make build
 [Etcher](https://www.balena.io/etcher) or [Raspberry Pi Imager](https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility)
 can be used for burning the image to an SD card.
 
-### [Experimental] Boot and Validate with Vagrant
+### [Work in progress] Boot and Validate with Vagrant
 
 Download a kernel.
 
