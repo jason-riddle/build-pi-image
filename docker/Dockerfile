@@ -21,7 +21,7 @@ ARG PACKER_VERSION=1.6.1
 
 # Install dependencies
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends sudo ca-certificates make qemu-user-static tzdata unzip wget xz-utils
+    && apt-get install -y --no-install-recommends sudo ca-certificates kpartx make qemu-user-static tzdata unzip wget xz-utils
 
 # Install packer
 RUN wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip 2>/dev/null \
