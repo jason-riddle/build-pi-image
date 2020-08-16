@@ -55,7 +55,7 @@
     {
       "type": "manifest",
       "output": "{{user `output_dir`}}/manifest.json",
-      "strip_path": false
+      "strip_path": true
     }
   ]
 }
