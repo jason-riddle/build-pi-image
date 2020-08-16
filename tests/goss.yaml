@@ -2,3 +2,7 @@ file:
   /boot/ssh:
     filetype: file
     exists: true
+
+package:
+  ansible:
+    installed: true

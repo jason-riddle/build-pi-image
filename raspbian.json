@@ -25,6 +25,13 @@
       ]
     },
     {
+      "type": "shell",
+      "inline": [
+        "apt-get update -y",
+        "apt-get install -y ansible --no-install-recommends"
+      ]
+    },
+    {
       "type": "goss",
       "version": "0.3.12",
       "tests": [
