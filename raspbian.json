@@ -27,8 +27,8 @@
     {
       "type": "shell",
       "inline": [
-        "apt-get update -y",
-        "apt-get install -y ansible --no-install-recommends"
+        "DEBIAN_FRONTEND=noninteractive apt-get update -y",
+        "DEBIAN_FRONTEND=noninteractive apt-get install -y ansible --no-install-recommends"
       ]
     },
     {
@@ -37,6 +37,25 @@
       "tests": [
         "tests/goss.yaml"
       ]
+    },
+    {
+      "type": "ansible-local",
+      "extra_arguments": [
+        "-vvvv"
+      ],
+      "playbook_file": "ansible/local.yml"
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "checksum",
+      "checksum_types": ["md5", "sha1", "sha256"],
+      "output": "{{user `output_dir`}}/raspbian-buster-lite.img.{{.ChecksumType}}"
+    },
+    {
+      "type": "manifest",
+      "output": "{{user `output_dir`}}/manifest.json",
+      "strip_path": false
     }
   ]
 }

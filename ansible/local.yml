@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Install vim.
+      package:
+        name: 'vim'
+        state: present
