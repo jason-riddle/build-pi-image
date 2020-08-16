@@ -11,7 +11,7 @@ to validate. This repo can be forked and tailored for other needs.
 - docker
 - docker-compose
 
-## Usage
+## Build with Packer
 
 Checkout git submodules.
 
@@ -27,3 +27,28 @@ make build
 
 [Etcher](https://www.balena.io/etcher) or [Raspberry Pi Imager](https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility)
 can be used for burning the image to an SD card.
+
+### [Experimental] Boot and Validate with Vagrant
+
+Download a kernel.
+
+```sh
+wget -nc https://github.com/dhruvvyas90/qemu-rpi-kernel/raw/master/kernel-qemu-4.4.34-jessie
+```
+
+Start vagrant virtual machine.
+
+```sh
+vagrant up
+vagrant ssh
+```
+
+Boot with qemu.
+
+```sh
+BUILD_TIMESTAMP="2020-08-15T23:07:43-0700"
+export KERNEL="/vagrant/kernel-qemu-4.4.34-jessie"
+export IMAGE="/vagrant/builds/${BUILD_TIMESTAMP}/image/raspbian-buster-lite.img"
+
+/vagrant/boot.sh
+```

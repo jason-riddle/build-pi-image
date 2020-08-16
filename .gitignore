@@ -1,3 +1,6 @@
+.vagrant
+
+kernel-qemu*
 *.img
 *.iso
 *.iso.lock
