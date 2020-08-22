@@ -1,6 +1,6 @@
-# Packer Build: Raspberry Pi Image
+# Build Raspberry Pi Images
 
-Build Raspberry Pi images using Docker and Packer.
+Build Raspberry Pi images with Docker.
 
 The goal of this project is to automate building Raspberry Pi images. The built
 image has ssh enabled and runs a [goss](https://github.com/aelsabbahy/goss) test.
