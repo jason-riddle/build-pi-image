@@ -13,6 +13,8 @@ build:
 	--abort-on-container-exit \
 	--remove-orphans
 
-build-image:
+build-image: build-raspbian
+
+build-raspbian:
 	mkdir -p $(BUILD_OUTPUT_DIR)/image
 	packer build -var 'output_dir=$(BUILD_OUTPUT_DIR)/image' raspbian.json
