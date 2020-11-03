@@ -46,9 +46,9 @@ vagrant ssh
 Boot with qemu.
 
 ```sh
-BUILD_TIMESTAMP="2020-08-15T23:07:43-0700"
+BUILD_TIMESTAMP="2020-08-16T15:18:11-0700"
 export KERNEL="/vagrant/kernel-qemu-4.4.34-jessie"
-export IMAGE="/vagrant/builds/${BUILD_TIMESTAMP}/image/raspbian-buster-lite.img"
+export IMAGE="/vagrant/builds/timestamps/${BUILD_TIMESTAMP}/image/raspbian-buster-lite.img"
 
 /vagrant/boot.sh
 ```
